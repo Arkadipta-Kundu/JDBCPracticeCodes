@@ -58,7 +58,7 @@ public class JdbcPractice {
                         query = "select email from users where age = ?";
                         pst = conn.prepareStatement(query);
                         age = 22;
-                        pst.setInt(1, age);
+                        pst.setInt(1, age); 
                         rs = pst.executeQuery();
                         while (rs.next()) {
                                 System.out.println("Email is for age " + age + " is " + rs.getString("email"));
